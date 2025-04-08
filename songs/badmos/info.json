@@ -1,4 +1,6 @@
 {
-  "title": "Badmos Album",
-  "description": "Cool tracks from Badmos."
+  "tracks": [
+    "song1.mp3",
+    "song2.mp3"
+  ]
 }
