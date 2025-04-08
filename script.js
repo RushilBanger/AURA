@@ -11,7 +11,7 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder) {
     currFolder = folder;
-    const res = await fetch(`/${folder}/info.json`);
+    const res = await fetch(`${folder}/info.json`);
     const data = await res.json();
     songs = data.songs;
 
@@ -50,13 +50,13 @@ function playMusic(track, pause = false) {
 }
 
 async function displayAlbums() {
-    const res = await fetch("/songs/info.json");
+    const res = await fetch("songs/info.json");
     const albums = await res.json();
     const cardContainer = document.querySelector(".cardContainer");
     cardContainer.innerHTML = "";
 
     for (let folder of albums) {
-        const albumRes = await fetch(`/songs/${folder}/info.json`);
+        const albumRes = await fetch(`songs/${folder}/info.json`);
         const album = await albumRes.json();
 
         cardContainer.innerHTML += `
