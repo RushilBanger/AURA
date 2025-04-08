@@ -98,7 +98,7 @@ async function displayAlbums() {
 }
 
 async function main() {
-    await getSongs("songs/badmos");
+    await getSongs("./songs/badmos");
     playMusic(songs[0], true);
 
     displayAlbums();
